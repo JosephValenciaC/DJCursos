@@ -1,20 +1,20 @@
-{% extends 'inicio/encabezado.html' %} {% block titulo %} Cursos {% endblock %} 
-
-{% comment %} Contenido Cursos {% endcomment %}
-{% block contenido %}
-<h2>Cursos</h2><br>
-    <div class="curso" style=" background-color: #5d92c46f; text-style: none; text-decoration: none;
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Cursos {% endblock %} {% comment %} Contenido Cursos {% endcomment %} {% block contenido %}
+<h1>Cursos</h1><br>
+<div class="curso" style=" background-color: #5d92c46f; text-style: none; text-decoration: none;
     color: #fff;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;">
-    <li>
+    font-family: 'Roboto', sans-serif;
+    margin-left: 200px;
+    margin-right:600px;
+    padding:50px;
+    border-radius:20px">
+
     <br> <a href="https://platzi.com/cursos/bd/" target="-blanck">Base de Datos</a>
     <br> <a href="https://platzi.com/cursos/programacion-estructurada/" target="-blanck">Programacion</a>
     <br> <a href="https://www.djangoproject.com/" target="-blanck">Django</a>
     <br> <a href="https://flask.palletsprojects.com/en/2.1.x/" target="-blanck">Flask</a>
     <br> <a href="https://flask.palletsprojects.com/en/2.1.x/" target="-blanck">React</a>
     <br> <a href="https://platzi.com/cursos/vuejs/?gclid=CjwKCAjw14uVBhBEEiwAaufYx0uNPrqV008Rb2krYrG358OCElQow0CbQOuVXd2MaUhq5QpuJSyvlRoCVLUQAvD_BwE&gclsrc=aw.ds" target="-blanck">Vue</a>
-    </li>
-    </div>
+</div>
 
-    {% endblock%}
+{% endblock%}
