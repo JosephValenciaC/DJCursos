@@ -1,3 +1,20 @@
-<a href="/">Inicio"</a>
-<a href="/cursos">Cursos</a>
-<a href="/contacto/">Contacto</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>{%block titulo%}Plantilla{%endblock%}</title>
+</head>
+
+<body>
+
+
+<a href="{%url 'principal'%}">Inicio</a>
+<a href="{%url 'cursos'%}">Cursos</a>
+<a href="{%url 'contacto' %}">Contacto</a>
+
+{%block contenido%}
+{% comment %} Contenido Templates {% endcomment %}
+{%endblock%}
