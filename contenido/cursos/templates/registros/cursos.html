@@ -2,12 +2,14 @@
 <br><br>
 
 
-<div class="card card-primary m-4 my-3">
+<div class="card text-bg-dark mb-3 card-primary m-4 my-3">
     <div class="card-header">
-        <h3 class="card-title">Principal</h3>
+        <h3 class="card-title">Cursos
+            <div class="mt-1 spinner-grow text-primary" role="status"></div>
+        </h3>
     </div>
     <div class="card-body">
-        <table class="table table-bordered table-striped">
+        <table class="table table-dark table-striped table-striped ">
             <thead>
                 <tr>
                     <th>Logo</th>
@@ -21,13 +23,13 @@
             <tbody>
                 {% for curso in cursos %}
                 <tr>
-                    <td class="text-center">
-                        <image src="{{curso.imagen.url }}" alt="{{ curso.nombre }}" class="img-fluid" width="100">
+                    <td class="text-center ">
+                        <image src="{{curso.imagen.url }} " alt="{{ curso.nombre }} " class="img-fluid " width="100 ">
                     </td>
                     <td>{{ curso.NombreCurso }}</td>
                     <td>{{ curso.NombreTutor }}</td>
                     <td>{{ curso.Descripcion }}</td>
-                    <td><a href="{{ curso.Link }}"> {{ curso.Platafroma }}</a></td>
+                    <td><a href="{{ curso.Link }} "> {{ curso.Platafroma }}</a></td>
                 </tr>
                 {% endfor %}
 
