@@ -19,21 +19,22 @@
                 </tr>
             </thead>
             <tbody>
+                {% for curso in cursos %}
                 <tr>
                     <td class="text-center">
-                        <img src='https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2016/03/1b04b-django-logo.png?ssl=1' width="100">
+                        <image src="{{curso.imagen.url }}" alt="{{ curso.nombre }}" class="img-fluid" width="100">
                     </td>
-                    <td class="text-semibold">Flutter</td>
-                    <td class="muted">Fernando Herrera</td>
-                    <td class="muted">Curso Flutter Basico</td>
-                    <td class="muted">
-                        <a href="udemy.com" target="_blank">udemy</td>
-                     </tr>
-            </tbody>
+                    <td>{{ curso.NombreCurso }}</td>
+                    <td>{{ curso.NombreTutor }}</td>
+                    <td>{{ curso.Descripcion }}</td>
+                    <td><a href="{{ curso.Link }}"> {{ curso.Platafroma }}</a></td>
+                </tr>
+                {% endfor %}
+
         </table>
     </div>
 </div>
 
 
 
-    {% endblock%}
+{% endblock%}
