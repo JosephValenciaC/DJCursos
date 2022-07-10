@@ -2,6 +2,7 @@
 from typing import Optional, Sequence
 from django.contrib import admin
 from .models import Cursos
+from .models import Actividad
 
 
 class AdministartModelo(admin.ModelAdmin):
@@ -14,5 +15,14 @@ class AdministartModelo(admin.ModelAdmin):
 
     
 admin.site.register(Cursos, AdministartModelo)
+
+
+class AdministrarComentarios(admin.ModelAdmin):
+    list_display = ('id','descripCurso')
+    search_fields: Sequence[str] = ('id','created')
+    date_hierarchy = 'created'
+    readonly_fields: Sequence[str] = ('created', 'id')
+    
+admin.site.register(Actividad, AdministrarComentarios)
 
 
