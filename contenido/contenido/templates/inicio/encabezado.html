@@ -21,16 +21,20 @@
             <div class="collapse navbar-collapse justify-content-center" style="margin-right:120px ;" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'principal' %}">
+                        <a class="nav-link active" aria-current="page" href="{% url 'Principal' %}">
                             <ion-icon name="home-outline"></ion-icon> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="margin-left:60px ;" href="{% url 'cursos' %}">
+                        <a class="nav-link" style="margin-left:60px ;" href="{% url 'Cursos' %}">
                             <ion-icon name="planet-outline"></ion-icon> Cursos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " style="margin-left:60px ;" href="{% url 'contacto' %}">
+                        <a class="nav-link " style="margin-left:60px ;" href="{% url 'Contacto' %}">
                             <ion-icon name="chatbox-ellipses-outline"></ion-icon> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " style="margin-left:60px ;" href="{% url 'ConsultaContacto' %}">
+                            <ion-icon name="chatbox-ellipses-outline"></ion-icon>Ver Comentarios</a>
                     </li>
                 </ul>
             </div>
@@ -39,7 +43,10 @@
     
 
 {%block contenido%}
-{% comment %} Contenido Templates {% endcomment %}
+
+
+
+
 {%endblock%}
 <br><br><br><br><br><br><br><br><br>
   <!-- Copyright -->

@@ -1,9 +1,25 @@
 
 from typing import Optional, Sequence
 from django.contrib import admin
-from .models import Cursos
+from .models import ComentarioContacto, Cursos
 from .models import Actividad
+from .models import Comentario
 
+class AdministrarComentarios(admin.ModelAdmin):
+    list_display = ('id', 'coment')
+    search_fields = ('id','created')
+    date_hierarchy = 'created'
+    readonly_fields = ('created', 'id')
+
+admin.site.register(Comentario, AdministrarComentarios)
+
+class AdministrarComentariosContacto(admin.ModelAdmin):
+    list_display = ('id', 'mensaje')
+    search_fields = ('id','created')
+    date_hierarchy = 'created'
+    readonly_fields = ('created', 'id')
+
+admin.site.register(ComentarioContacto, AdministrarComentariosContacto)
 
 class AdministartModelo(admin.ModelAdmin):
     readonly_fields: Sequence[str] = ('created', 'update')
