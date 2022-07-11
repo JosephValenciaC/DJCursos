@@ -1,10 +1,20 @@
 {% extends 'inicio/encabezado.html' %} {% block titulo %} PRINCIPAL {% endblock %} {% comment %} Contenido PRINCIPAL {% endcomment %} {% block contenido %}
+{% load static %}
 
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" >
+        <video src="{%static 'img/fondo.mp4' %}"  autoplay muted class="d-block w-100">
+            <source src="movie.mp4" type="video/mp4">
 
-</div>
-<br><br>
-<center>
-    <h1>Hola Mundo</h1><br>
-    <img src='https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2016/03/1b04b-django-logo.png?ssl=1' width='250'>
-    <br><br>
-    <p style="font-family: Roboto ;">Holaa... Este es mi primer sitio web con Django y Python</center>" {% endblock %}
+        </video>
+       
+      </div>
+      <div class="carousel-caption " style="margin-bottom:400px; border-radius: 10%; margin-left: 300px; margin-right: 300px; background-color:rgba(0, 0, 0, 0.615) ;">
+        <h5>Joseph Valencia Cisneros</h5>
+        <p>Sitio web Personal Usando Django y Python</p>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
